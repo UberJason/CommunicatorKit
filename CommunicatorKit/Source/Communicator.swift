@@ -14,12 +14,12 @@ import WatchKit
 import os.log
 import WatchConnectivity
 
-public class Communicator: NSObject {
+open class Communicator: NSObject {
     @objc public var wcSession: WCSession = WCSession.default
-    let messageHandler: MessageHandler
-    weak var errorDelegate: CommunicatorErrorDelegate?
+    public let messageHandler: MessageHandler
+    public weak var errorDelegate: CommunicatorErrorDelegate?
     
-    init(messageHandler: MessageHandler, errorDelegate: CommunicatorErrorDelegate? = nil) {
+    public init(messageHandler: MessageHandler, errorDelegate: CommunicatorErrorDelegate? = nil) {
         self.messageHandler = messageHandler
         self.errorDelegate = errorDelegate
         super.init()
@@ -28,7 +28,7 @@ public class Communicator: NSObject {
         wcSession.activate()
     }
     
-    public func validateWatchConnectivity() -> ValidationResult {
+    open func validateWatchConnectivity() -> ValidationResult {
         guard WCSession.isSupported() else { return .error(TransferError.transferNotSupported) }
         guard wcSession.activationState == .activated else { return .error(TransferError.sessionNotActive) }
         #if os(iOS)
@@ -39,7 +39,7 @@ public class Communicator: NSObject {
         return .success
     }
     
-    func sendMessage(_ transferMessage: TransferMessage, withSuccess success: @escaping WatchCommunicationSuccessHandler, withFailure failure: @escaping WatchCommunicationFailureHandler<TransferError>) {
+    open func sendMessage(_ transferMessage: TransferMessage, withSuccess success: @escaping WatchCommunicationSuccessHandler, withFailure failure: @escaping WatchCommunicationFailureHandler<TransferError>) {
         if case let .error(transferError) = validateWatchConnectivity() {
             failure(transferError)
             return
