@@ -16,6 +16,9 @@
 		96B48C73225D504600DA2A4A /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B48C6B225D4FEB00DA2A4A /* ValidationResult.swift */; };
 		96B48C75225D505400DA2A4A /* TransferError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B48C74225D505400DA2A4A /* TransferError.swift */; };
 		96B48C7F225D743E00DA2A4A /* CommunicatorErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B48C7E225D743D00DA2A4A /* CommunicatorErrorDelegate.swift */; };
+		96B48C84225D7ACA00DA2A4A /* CommunicatorKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 96B48C81225D7ACA00DA2A4A /* CommunicatorKit.podspec */; };
+		96B48C85225D7ACA00DA2A4A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 96B48C82225D7ACA00DA2A4A /* LICENSE */; };
+		96B48C86225D7ACA00DA2A4A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96B48C83225D7ACA00DA2A4A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		96B48C6D225D4FEB00DA2A4A /* Handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handlers.swift; sourceTree = "<group>"; };
 		96B48C74225D505400DA2A4A /* TransferError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferError.swift; sourceTree = "<group>"; };
 		96B48C7E225D743D00DA2A4A /* CommunicatorErrorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicatorErrorDelegate.swift; sourceTree = "<group>"; };
+		96B48C81225D7ACA00DA2A4A /* CommunicatorKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CommunicatorKit.podspec; sourceTree = "<group>"; };
+		96B48C82225D7ACA00DA2A4A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		96B48C83225D7ACA00DA2A4A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,9 @@
 		96B48C52225D4F2B00DA2A4A = {
 			isa = PBXGroup;
 			children = (
+				96B48C81225D7ACA00DA2A4A /* CommunicatorKit.podspec */,
+				96B48C82225D7ACA00DA2A4A /* LICENSE */,
+				96B48C83225D7ACA00DA2A4A /* README.md */,
 				96B48C5E225D4F2B00DA2A4A /* CommunicatorKit */,
 				96B48C5D225D4F2B00DA2A4A /* Products */,
 			);
@@ -160,6 +169,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B48C86225D7ACA00DA2A4A /* README.md in Resources */,
+				96B48C85225D7ACA00DA2A4A /* LICENSE in Resources */,
+				96B48C84225D7ACA00DA2A4A /* CommunicatorKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
