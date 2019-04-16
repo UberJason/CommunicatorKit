@@ -137,7 +137,7 @@ extension Communicator: WCSessionDelegate {
     
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         let receivedMessage = ReceivedMessage(userInfo: message, synchronous: true)
-        messageHandler.handleMessage(receivedMessage, replyHandler: nil)
+        messageHandler.handleMessage(receivedMessage, replyHandler: replyHandler)
         
     }
     
