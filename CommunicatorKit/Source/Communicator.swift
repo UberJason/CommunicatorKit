@@ -11,6 +11,7 @@ import UIKit
 #elseif os(watchOS)
 import WatchKit
 #endif
+import Combine
 import os.log
 import WatchConnectivity
 
@@ -18,6 +19,8 @@ open class Communicator: NSObject {
     @objc public var wcSession: WCSession = WCSession.default
     public let messageHandler: MessageHandler
     public weak var errorDelegate: CommunicatorErrorDelegate?
+    
+    public var cancellables = Set<AnyCancellable>()
     
     public init(messageHandler: MessageHandler, errorDelegate: CommunicatorErrorDelegate? = nil) {
         self.messageHandler = messageHandler
