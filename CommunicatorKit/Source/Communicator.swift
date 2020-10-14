@@ -54,11 +54,7 @@ open class Communicator: NSObject {
                 failure(TransferError.notReachable)
                 return
             }
-            wcSession.sendMessage(transferMessage.userInfo, replyHandler: { (replyInfo) in
-                success(replyInfo)
-            }) { (error) in
-                print(error.localizedDescription)
-            }
+            sendMessageAsLive(transferMessage, withSuccess: success, withFailure: failure)
         }
         else {
             // Send the message as:
