@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CommunicatorKit'
-  s.version          = '0.2.1'
+  s.version          = '0.3.0'
   s.summary          = 'A framework for managing WatchConnectivity communication between iPhone and Apple Watch.'
   s.description      = <<-DESC
 A framework for managing WatchConnectivity communication between phone and watch. Should be considered experimental for now, although one app has already been shipped with it. Define message objects that conform to the TransferMessage protocol, and ask Communicator to send them. Define a message-handling class that conforms to the MessageHandler protocol, and Communicator will defer to that class whenever messages come in. Optionally define a class that conforms to the CommunicatorErrorDelegate protocol, and Communicator will pass errors to that class.
@@ -23,7 +23,7 @@ A framework for managing WatchConnectivity communication between phone and watch
   s.ios.deployment_target = '13.0'
   s.watchos.deployment_target = '6.0'
 
-  s.source_files = 'CommunicatorKit/Source/**/*'
+  s.source_files = 'Sources/CommunicatorKit/**/*'
 
   s.swift_version = '5.3'
 
