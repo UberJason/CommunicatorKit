@@ -9,6 +9,6 @@
 import Foundation
 import os.log
 
-public protocol MessageHandler: class {
+public protocol MessageHandler: AnyObject {
     func handleMessage(_ message: TransferMessage, replyHandler: (([String : Any]) -> Void)?)
 }

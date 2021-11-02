@@ -9,7 +9,7 @@
 import Foundation
 import WatchConnectivity
 
-public protocol CommunicatorErrorDelegate: class {
+public protocol CommunicatorErrorDelegate: AnyObject {
     func sessionActivationDidFail(_ activationState: WCSessionActivationState, with error: Error)
     func userInfoTransferFailed(_ userInfoTransfer: WCSessionUserInfoTransfer, with error: Error)
     func fileTransferFailed(_ fileTransfer: WCSessionFileTransfer, with error: Error)
